@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr" data-produit="Sonolix">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sonolix — état des services</title>
+<meta name="description" content="État en temps réel des services Sonolix : RIS, images, dictée, envoi vers Doctolib.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='11' fill='%2316a34a'/></svg>">
+<style>
+  :root{
+    --fond:#f6f7f9; --carte:#fff; --trait:#e3e6ea; --encre:#16202b; --encre-doux:#5d6b7a;
+    --vert:#16a34a; --jaune:#d99100; --orange:#e2650f; --rouge:#dc2626; --bleu:#2563eb; --gris:#9aa5b1;
+    --ombre:0 1px 2px rgba(16,32,48,.06),0 8px 24px rgba(16,32,48,.05);
+    --r:14px; --large:860px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--fond:#0e1319; --carte:#161d26; --trait:#252f3b; --encre:#e8edf3; --encre-doux:#93a2b3;
+          --ombre:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fond);color:var(--encre);
+       font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .page{max-width:var(--large);margin:0 auto;padding:28px 20px 64px}
+  header{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .logo{font-weight:700;font-size:20px;letter-spacing:-.02em}
+  .logo span{color:var(--encre-doux);font-weight:500}
+
+  .banniere{border-radius:var(--r);padding:20px 22px;margin-bottom:22px;color:#fff;
+            box-shadow:var(--ombre);display:flex;gap:16px;align-items:flex-start}
+  .banniere h1{margin:0 0 4px;font-size:20px;font-weight:650;letter-spacing:-.01em}
+  .banniere p{margin:0;opacity:.94;font-size:15px}
+  .banniere .rond{width:14px;height:14px;border-radius:50%;background:#fff;flex:0 0 auto;margin-top:6px;
+                  box-shadow:0 0 0 5px rgba(255,255,255,.28)}
+  .b-operationnel{background:var(--vert)} .b-degrade{background:var(--jaune)}
+  .b-panne_partielle{background:var(--orange)} .b-panne_majeure{background:var(--rouge)}
+  .b-maintenance{background:var(--bleu)} .b-inconnu{background:var(--gris)}
+
+  .carte{background:var(--carte);border:1px solid var(--trait);border-radius:var(--r);
+         box-shadow:var(--ombre);overflow:hidden;margin-bottom:20px}
+  .titre-bloc{font-size:12px;font-weight:650;letter-spacing:.09em;text-transform:uppercase;
+              color:var(--encre-doux);padding:16px 20px 10px}
+  .ligne{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:center;
+         padding:14px 20px;border-top:1px solid var(--trait)}
+  .ligne:first-of-type{border-top:none}
+  .nom{font-weight:550}
+  .aide{grid-column:1;font-size:13.5px;color:var(--encre-doux);margin-top:-2px}
+  .detail{grid-column:1;font-size:13.5px;margin-top:2px}
+  .etat{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;
+        white-space:nowrap;grid-row:1;grid-column:2}
+  .pastille{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+  .e-operationnel{color:var(--vert)} .e-operationnel .pastille{background:var(--vert)}
+  .e-degrade{color:var(--jaune)} .e-degrade .pastille{background:var(--jaune)}
+  .e-panne_partielle{color:var(--orange)} .e-panne_partielle .pastille{background:var(--orange)}
+  .e-panne_majeure{color:var(--rouge)} .e-panne_majeure .pastille{background:var(--rouge)}
+  .e-maintenance{color:var(--bleu)} .e-maintenance .pastille{background:var(--bleu)}
+  .e-inconnu{color:var(--gris)} .e-inconnu .pastille{background:var(--gris)}
+  .e-non_applicable{color:var(--gris)} .e-non_applicable .pastille{background:var(--gris)}
+
+  .barres{grid-column:1/-1;display:flex;gap:2px;margin-top:10px;height:26px;align-items:stretch}
+  .barres i{flex:1 1 0;border-radius:2px;background:var(--trait);min-width:2px}
+  .barres i.operationnel{background:var(--vert)} .barres i.degrade{background:var(--jaune)}
+  .barres i.panne_partielle{background:var(--orange)} .barres i.panne_majeure{background:var(--rouge)}
+  .barres i.maintenance{background:var(--bleu)}
+  .echelle{grid-column:1/-1;display:flex;justify-content:space-between;
+           font-size:11.5px;color:var(--encre-doux);margin-top:5px}
+
+  .incident{padding:16px 20px;border-top:1px solid var(--trait)}
+  .incident:first-of-type{border-top:none}
+  .incident h3{margin:0 0 3px;font-size:16px}
+  .inc-meta{font-size:13px;color:var(--encre-doux);margin-bottom:10px}
+  .etape{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.05em;
+         text-transform:uppercase;padding:2px 8px;border-radius:999px;
+         background:var(--trait);color:var(--encre-doux);margin-right:8px}
+  .msg{border-left:2px solid var(--trait);padding:2px 0 2px 14px;margin:9px 0;font-size:14.5px}
+  .msg b{display:block;font-size:12px;color:var(--encre-doux);font-weight:600}
+
+  .avis{background:var(--carte);border:1px solid var(--trait);border-left:3px solid var(--jaune);
+        border-radius:var(--r);padding:14px 18px;margin-bottom:20px;font-size:14.5px}
+  footer{color:var(--encre-doux);font-size:13.5px;text-align:center;margin-top:26px;line-height:1.7}
+  footer a{color:inherit}
+  .vieux{color:var(--orange);font-weight:600}
+  @media (max-width:560px){
+    .page{padding:20px 14px 48px}
+    .ligne{grid-template-columns:1fr;padding:13px 16px}
+    .etat{grid-column:1;grid-row:auto;margin-top:2px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="logo">Sonolix <span>· état des services</span></div>
+  </header>
+
+  <div id="banniere" class="banniere b-inconnu">
+    <div class="rond"></div>
+    <div><h1 id="titre">Lecture de l'état en cours…</h1><p id="resume">Un instant.</p></div>
+  </div>
+
+  <div id="avis"></div>
+  <div id="incidents"></div>
+  <div id="corps"></div>
+  <div id="cabinet"></div>
+
+  <footer>
+    <div id="pied">Mesuré automatiquement toutes les minutes.</div>
+    <div style="margin-top:6px">
+      Un problème qui n'apparaît pas ici ? Écrivez à
+      <a href="mailto:support@sonolix.fr">support@sonolix.fr</a>.
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // La page vit à deux endroits : sur la plateforme, et sur un miroir hébergé
+  // ailleurs. On interroge TOUJOURS la plateforme d'abord ; si elle ne répond
+  // pas, c'est en soi l'information la plus importante à afficher.
+  var LIVE = "https://ris.sonolix.fr/statut/etat.json";
+  var LOCAL = "etat.json";
+  var jeton = new URLSearchParams(location.search).get("c");
+  if (jeton) { LIVE = "https://ris.sonolix.fr/statut/c/" + encodeURIComponent(jeton) + ".json"; }
+
+  var $ = function (id) { return document.getElementById(id); };
+  var LIB = {operationnel:"Opérationnel", degrade:"Ralenti", panne_partielle:"Panne partielle",
+             panne_majeure:"En panne", maintenance:"Maintenance", inconnu:"Indéterminé",
+             non_applicable:"Non concerné"};
+  var ETAPE = {investigation:"Recherche en cours", identifie:"Cause identifiée",
+               surveillance:"Sous surveillance", resolu:"Résolu"};
+  var PHRASE = {
+    operationnel:"Tout fonctionne normalement.",
+    degrade:"Certains services répondent plus lentement que d'habitude.",
+    panne_partielle:"Une partie des services est perturbée.",
+    panne_majeure:"Un service essentiel est actuellement interrompu.",
+    maintenance:"Maintenance en cours.",
+    inconnu:"État indéterminé."
+  };
+
+  function ech(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+
+  function heure(iso) {
+    if (!iso) return "";
+    var d = new Date(iso);
+    if (isNaN(d)) return String(iso).replace("T", " à ").slice(0, 16);
+    return d.toLocaleString("fr-FR", {day:"2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit"});
+  }
+
+  function jours(histo, n) {
+    // 90 cases, la plus ancienne à gauche. Un jour sans mesure reste neutre :
+    // on n'invente pas un vert qu'on n'a pas mesuré.
+    var out = [], j = new Date();
+    for (var i = n - 1; i >= 0; i--) {
+      var d = new Date(j.getTime() - i * 86400000);
+      var cle = d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-"
+              + String(d.getDate()).padStart(2,"0");
+      out.push({jour: cle, etat: (histo && histo[cle]) || ""});
+    }
+    return out;
+  }
+
+  function ligne(c, histo) {
+    var e = c.etat || "inconnu";
+    var barres = "";
+    var serie = jours(histo, window.innerWidth < 560 ? 45 : 90);
+    // Tant qu'on n'a pas au moins trois jours mesurés, on n'affiche pas la frise :
+    // 90 barres grises donneraient l'impression que rien n'a jamais fonctionné.
+    if (histo && Object.keys(histo).length >= 3) {
+      barres = '<div class="barres">' + serie.map(function (d) {
+        var t = d.etat ? (LIB[d.etat] || d.etat) : "pas de mesure";
+        return '<i class="' + ech(d.etat) + '" title="' + ech(d.jour + " — " + t) + '"></i>';
+      }).join("") + '</div><div class="echelle"><span>il y a ' + serie.length
+              + ' jours</span><span>aujourd\'hui</span></div>';
+    }
+    return '<div class="ligne">'
+      + '<div class="nom">' + ech(c.nom) + '</div>'
+      + '<div class="etat e-' + ech(e) + '"><span class="pastille"></span>'
+      + ech(LIB[e] || e) + '</div>'
+      + (c.aide ? '<div class="aide">' + ech(c.aide) + '</div>' : "")
+      + (c.detail ? '<div class="detail e-' + ech(e) + '">' + ech(c.detail) + '</div>' : "")
+      + barres + '</div>';
+  }
+
+  function bloc(titre, lignes) {
+    if (!lignes) return "";
+    return '<div class="carte"><div class="titre-bloc">' + ech(titre) + '</div>' + lignes + '</div>';
+  }
+
+  function incidents(liste) {
+    var ouverts = (liste || []).filter(function (i) { return i.etat !== "resolu"; });
+    var clos = (liste || []).filter(function (i) { return i.etat === "resolu"; }).slice(0, 5);
+    var rendu = function (i) {
+      return '<div class="incident"><h3>' + ech(i.titre) + '</h3>'
+        + '<div class="inc-meta"><span class="etape">' + ech(ETAPE[i.etat] || i.etat)
+        + '</span>ouvert le ' + ech(heure(i.ouvert_le)) + '</div>'
+        + (i.messages || []).slice().reverse().map(function (m) {
+            return '<div class="msg"><b>' + ech(heure(m.le)) + ' · '
+                 + ech(ETAPE[m.etape] || m.etape || "") + '</b>' + ech(m.texte) + '</div>';
+          }).join("") + '</div>';
+    };
+    return (ouverts.length ? bloc("Incident en cours", ouverts.map(rendu).join("")) : "")
+         + (clos.length ? bloc("Incidents récents", clos.map(rendu).join("")) : "");
+  }
+
+  function dessiner(d, source) {
+    var g = d.etat_global || "inconnu";
+    $("banniere").className = "banniere b-" + g;
+    $("titre").textContent = PHRASE[g] || LIB[g] || g;
+    $("resume").textContent = d.resume || "";
+    document.title = (g === "operationnel" ? "✅ " : "⚠️ ") + "Sonolix — état des services";
+
+    $("avis").innerHTML = source === "miroir"
+      ? '<div class="avis"><b>Nous n\'arrivons pas à joindre la plateforme depuis cette page.</b> '
+        + 'Ce que vous voyez ci-dessous est le dernier état connu, relevé le '
+        + ech(heure(d.genere_le)) + '. Si Sonolix ne s\'ouvre pas non plus de votre côté, '
+        + 'c\'est bien une panne de notre côté : nous sommes prévenus automatiquement.</div>'
+      : "";
+
+    $("incidents").innerHTML = incidents(d.incidents);
+
+    var histo = d.historique || {};
+    var corps = bloc("Services Sonolix",
+      (d.composants || []).map(function (c) { return ligne(c, histo[c.cle]); }).join(""));
+    if (d.tiers && d.tiers.length) {
+      corps += bloc("Services extérieurs — nous les recopions, nous ne les pilotons pas",
+        d.tiers.map(function (c) { return ligne(c, null); }).join(""));
+    }
+    $("corps").innerHTML = corps;
+
+    var mc = d.mon_cabinet;
+    if (mc) {
+      var m = mc.mesures || {};
+      $("cabinet").innerHTML = bloc("Votre cabinet — " + ech(d.cabinet || ""),
+        ligne({nom:"Liste de travail envoyée à l'échographe", etat:mc.worklist,
+               aide:(m.worklist_count || 0) + " patient(s) en attente sur la machine"}, null)
+      + ligne({nom:"Réception des images de votre échographe", etat:mc.images,
+               aide:(m.study_count || 0) + " examen(s) reçus"
+                    + (m.derniere_image ? " · dernier le " + ech(m.derniere_image) : "")}, null));
+    }
+
+    var age = Math.round((Date.now() - new Date(d.genere_le).getTime()) / 60000);
+    var vieux = isNaN(age) || age > 6;
+    $("pied").innerHTML = "Dernière mesure : " + ech(heure(d.genere_le))
+      + (vieux ? ' <span class="vieux">(la mesure ne s\'est pas rafraîchie)</span>' : "")
+      + " · relevé automatiquement toutes les minutes.";
+  }
+
+  function injoignable() {
+    $("banniere").className = "banniere b-panne_majeure";
+    $("titre").textContent = "La plateforme Sonolix ne répond pas.";
+    $("resume").textContent = "Nous en sommes automatiquement informés et nous intervenons. "
+      + "Inutile de nous appeler : cette page se mettra à jour dès le rétablissement.";
+    $("pied").textContent = "Dernière tentative : " + heure(new Date().toISOString());
+  }
+
+  function chercher(url, delai) {
+    return new Promise(function (res, rej) {
+      var stop = setTimeout(function () { rej(new Error("délai")); }, delai);
+      fetch(url, {cache: "no-store", mode: "cors"})
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error(r.status)); })
+        .then(function (j) { clearTimeout(stop); res(j); })
+        .catch(function (e) { clearTimeout(stop); rej(e); });
+    });
+  }
+
+  function rafraichir() {
+    chercher(LIVE, 8000)
+      .then(function (d) { dessiner(d, "live"); })
+      .catch(function () {
+        // La plateforme est muette. On retombe sur l'instantané déposé à côté de
+        // cette page (le miroir) — et on le dit clairement.
+        chercher(LOCAL, 5000)
+          .then(function (d) { dessiner(d, "miroir"); })
+          .catch(injoignable);
+      });
+  }
+
+  rafraichir();
+  setInterval(rafraichir, 60000);
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) rafraichir();
+  });
+})();
+</script>
+</body>
+</html>

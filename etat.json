@@ -1,0 +1,129 @@
+{
+ "produit": "Sonolix",
+ "genere_le": "2026-09-09T18:44:02+02:00",
+ "etat_global": "operationnel",
+ "resume": "Tous les services fonctionnent normalement.",
+ "libelles": {
+  "operationnel": "Opérationnel",
+  "maintenance": "Maintenance",
+  "non_applicable": "Non concerné",
+  "inconnu": "Indéterminé",
+  "degrade": "Ralenti",
+  "panne_partielle": "Panne partielle",
+  "panne_majeure": "En panne"
+ },
+ "composants": [
+  {
+   "cle": "acces_ris",
+   "nom": "Accès au RIS (connexion)",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "Ouvrir ris.sonolix.fr et se connecter.",
+   "depuis": "2026-09-09T18:02:36+02:00"
+  },
+  {
+   "cle": "liste_travail",
+   "nom": "Liste de travail — patients du jour",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "La liste des patients envoyée à l'échographe.",
+   "depuis": "2026-09-09T18:05:50+02:00"
+  },
+  {
+   "cle": "images",
+   "nom": "Réception des images depuis l'échographe",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "Les images arrivent de la machine jusqu'au dossier.",
+   "depuis": "2026-09-09T18:02:36+02:00"
+  },
+  {
+   "cle": "dictee",
+   "nom": "Dictée vocale",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "La dictée au micro pendant l'examen.",
+   "depuis": "2026-09-09T18:02:36+02:00"
+  },
+  {
+   "cle": "redaction_ia",
+   "nom": "Rédaction assistée par IA",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "La proposition de compte rendu.",
+   "depuis": "2026-09-09T18:02:36+02:00"
+  },
+  {
+   "cle": "apercu_images",
+   "nom": "Images et aperçu des examens",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "L'affichage des images dans le compte rendu.",
+   "depuis": "2026-09-09T18:02:36+02:00"
+  },
+  {
+   "cle": "signature",
+   "nom": "Signature électronique",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "La signature du compte rendu.",
+   "depuis": "2026-09-09T18:02:36+02:00"
+  },
+  {
+   "cle": "envoi_doctolib",
+   "nom": "Envoi du compte rendu vers Doctolib",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "Le dépôt automatique dans le dossier Doctolib du patient.",
+   "depuis": "2026-09-09T18:02:36+02:00"
+  },
+  {
+   "cle": "portail_confrere",
+   "nom": "Portail confrère et partage",
+   "etat": "operationnel",
+   "detail": "",
+   "aide": "L'accès du médecin correspondant au compte rendu.",
+   "depuis": "2026-09-09T18:41:28+02:00"
+  }
+ ],
+ "tiers": [
+  {
+   "cle": "doctolib",
+   "nom": "Doctolib",
+   "etat": "operationnel",
+   "detail": "All Systems Operational",
+   "source": "status.doctolib.com",
+   "aide": "Hors de notre contrôle. Nous le recopions pour vous."
+  }
+ ],
+ "incidents": [],
+ "historique": {
+  "acces_ris": {
+   "2026-09-09": "operationnel"
+  },
+  "liste_travail": {
+   "2026-09-09": "operationnel"
+  },
+  "images": {
+   "2026-09-09": "operationnel"
+  },
+  "dictee": {
+   "2026-09-09": "operationnel"
+  },
+  "redaction_ia": {
+   "2026-09-09": "operationnel"
+  },
+  "apercu_images": {
+   "2026-09-09": "operationnel"
+  },
+  "signature": {
+   "2026-09-09": "operationnel"
+  },
+  "envoi_doctolib": {
+   "2026-09-09": "degrade"
+  },
+  "portail_confrere": {
+   "2026-09-09": "operationnel"
+  }
+ }
+}
