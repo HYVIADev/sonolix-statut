@@ -1,6 +1,6 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-09-09T21:56:02+02:00",
+ "genere_le": "2026-09-10T03:59:08+02:00",
  "etat_global": "operationnel",
  "resume": "Tous les services fonctionnent normalement.",
  "libelles": {
@@ -99,31 +99,40 @@
  "incidents": [],
  "historique": {
   "acces_ris": {
-   "2026-09-09": "operationnel"
+   "2026-09-09": "operationnel",
+   "2026-09-10": "operationnel"
   },
   "liste_travail": {
-   "2026-09-09": "operationnel"
+   "2026-09-09": "operationnel",
+   "2026-09-10": "operationnel"
   },
   "images": {
-   "2026-09-09": "operationnel"
+   "2026-09-09": "operationnel",
+   "2026-09-10": "operationnel"
   },
   "dictee": {
-   "2026-09-09": "operationnel"
+   "2026-09-09": "operationnel",
+   "2026-09-10": "operationnel"
   },
   "redaction_ia": {
-   "2026-09-09": "operationnel"
+   "2026-09-09": "operationnel",
+   "2026-09-10": "operationnel"
   },
   "apercu_images": {
-   "2026-09-09": "operationnel"
+   "2026-09-09": "operationnel",
+   "2026-09-10": "operationnel"
   },
   "signature": {
-   "2026-09-09": "operationnel"
+   "2026-09-09": "operationnel",
+   "2026-09-10": "operationnel"
   },
   "envoi_doctolib": {
-   "2026-09-09": "degrade"
+   "2026-09-09": "degrade",
+   "2026-09-10": "operationnel"
   },
   "portail_confrere": {
-   "2026-09-09": "operationnel"
+   "2026-09-09": "operationnel",
+   "2026-09-10": "operationnel"
   }
  }
 }
