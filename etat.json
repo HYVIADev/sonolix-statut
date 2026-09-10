@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-09-10T12:36:14+02:00",
- "etat_global": "operationnel",
- "resume": "Tous les services fonctionnent normalement.",
+ "genere_le": "2026-09-10T12:46:23+02:00",
+ "etat_global": "panne_majeure",
+ "resume": "Accès au RIS (connexion) : en panne.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -16,10 +16,10 @@
   {
    "cle": "acces_ris",
    "nom": "Accès au RIS (connexion)",
-   "etat": "operationnel",
-   "detail": "",
+   "etat": "panne_majeure",
+   "detail": "moteur : injoignable",
    "aide": "Ouvrir ris.sonolix.fr et se connecter.",
-   "depuis": "2026-09-10T12:32:13+02:00"
+   "depuis": "2026-09-10T12:43:22+02:00"
   },
   {
    "cle": "liste_travail",
