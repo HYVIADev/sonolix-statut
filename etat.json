@@ -1,6 +1,6 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-09-10T12:51:19+02:00",
+ "genere_le": "2026-09-10T18:52:28+02:00",
  "etat_global": "operationnel",
  "resume": "Tous les services fonctionnent normalement.",
  "libelles": {
@@ -19,7 +19,7 @@
    "etat": "operationnel",
    "detail": "",
    "aide": "Ouvrir ris.sonolix.fr et se connecter.",
-   "depuis": "2026-09-10T12:48:19+02:00"
+   "depuis": "2026-09-10T15:20:04+02:00"
   },
   {
    "cle": "liste_travail",
