@@ -1,6 +1,6 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-09-13T21:35:33+02:00",
+ "genere_le": "2026-09-14T03:40:09+02:00",
  "etat_global": "operationnel",
  "resume": "Tous les services fonctionnent normalement.",
  "libelles": {
@@ -103,63 +103,72 @@
    "2026-09-10": "panne_majeure",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   },
   "liste_travail": {
    "2026-09-09": "operationnel",
    "2026-09-10": "operationnel",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   },
   "images": {
    "2026-09-09": "operationnel",
    "2026-09-10": "operationnel",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   },
   "dictee": {
    "2026-09-09": "operationnel",
    "2026-09-10": "operationnel",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   },
   "redaction_ia": {
    "2026-09-09": "operationnel",
    "2026-09-10": "operationnel",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   },
   "apercu_images": {
    "2026-09-09": "operationnel",
    "2026-09-10": "operationnel",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   },
   "signature": {
    "2026-09-09": "operationnel",
    "2026-09-10": "operationnel",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   },
   "envoi_doctolib": {
    "2026-09-09": "degrade",
    "2026-09-10": "operationnel",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   },
   "portail_confrere": {
    "2026-09-09": "operationnel",
    "2026-09-10": "operationnel",
    "2026-09-11": "operationnel",
    "2026-09-12": "operationnel",
-   "2026-09-13": "operationnel"
+   "2026-09-13": "operationnel",
+   "2026-09-14": "operationnel"
   }
  }
 }
