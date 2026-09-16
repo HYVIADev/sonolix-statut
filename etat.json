@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-09-16T11:27:47+02:00",
- "etat_global": "degrade",
- "resume": "Envoi du compte rendu vers Doctolib : ralenti.",
+ "genere_le": "2026-09-16T12:28:43+02:00",
+ "etat_global": "panne_partielle",
+ "resume": "Envoi du compte rendu vers Doctolib : panne partielle.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -72,10 +72,10 @@
   {
    "cle": "envoi_doctolib",
    "nom": "Envoi du compte rendu vers Doctolib",
-   "etat": "degrade",
-   "detail": "1 échec(s) sur 3 envois",
+   "etat": "panne_partielle",
+   "detail": "1 échec(s) sur 2 envois",
    "aide": "Le dépôt automatique dans le dossier Doctolib du patient.",
-   "depuis": "2026-09-16T11:07:39+02:00"
+   "depuis": "2026-09-16T12:25:40+02:00"
   },
   {
    "cle": "portail_confrere",
@@ -176,7 +176,7 @@
    "2026-09-13": "operationnel",
    "2026-09-14": "panne_partielle",
    "2026-09-15": "operationnel",
-   "2026-09-16": "degrade"
+   "2026-09-16": "panne_partielle"
   },
   "portail_confrere": {
    "2026-09-09": "operationnel",
