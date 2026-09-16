@@ -1,6 +1,6 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-09-16T05:07:03+02:00",
+ "genere_le": "2026-09-16T10:48:28+02:00",
  "etat_global": "operationnel",
  "resume": "Tous les services fonctionnent normalement.",
  "libelles": {
@@ -90,8 +90,8 @@
   {
    "cle": "doctolib",
    "nom": "Doctolib",
-   "etat": "operationnel",
-   "detail": "All Systems Operational",
+   "etat": "panne_partielle",
+   "detail": "Partial System Outage",
    "source": "status.doctolib.com",
    "aide": "Hors de notre contrôle. Nous le recopions pour vous."
   }
