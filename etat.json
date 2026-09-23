@@ -1,6 +1,6 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-09-22T22:24:22+02:00",
+ "genere_le": "2026-09-23T04:25:33+02:00",
  "etat_global": "operationnel",
  "resume": "Tous les services fonctionnent normalement.",
  "libelles": {
@@ -112,7 +112,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "operationnel",
-   "2026-09-22": "operationnel"
+   "2026-09-22": "operationnel",
+   "2026-09-23": "operationnel"
   },
   "liste_travail": {
    "2026-09-09": "operationnel",
@@ -128,7 +129,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "operationnel",
-   "2026-09-22": "operationnel"
+   "2026-09-22": "operationnel",
+   "2026-09-23": "operationnel"
   },
   "images": {
    "2026-09-09": "operationnel",
@@ -144,7 +146,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "operationnel",
-   "2026-09-22": "operationnel"
+   "2026-09-22": "operationnel",
+   "2026-09-23": "operationnel"
   },
   "dictee": {
    "2026-09-09": "operationnel",
@@ -160,7 +163,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "operationnel",
-   "2026-09-22": "operationnel"
+   "2026-09-22": "operationnel",
+   "2026-09-23": "operationnel"
   },
   "redaction_ia": {
    "2026-09-09": "operationnel",
@@ -176,7 +180,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "operationnel",
-   "2026-09-22": "operationnel"
+   "2026-09-22": "operationnel",
+   "2026-09-23": "operationnel"
   },
   "apercu_images": {
    "2026-09-09": "operationnel",
@@ -192,7 +197,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "operationnel",
-   "2026-09-22": "operationnel"
+   "2026-09-22": "operationnel",
+   "2026-09-23": "operationnel"
   },
   "signature": {
    "2026-09-09": "operationnel",
@@ -208,7 +214,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "operationnel",
-   "2026-09-22": "operationnel"
+   "2026-09-22": "operationnel",
+   "2026-09-23": "operationnel"
   },
   "envoi_doctolib": {
    "2026-09-09": "degrade",
@@ -224,7 +231,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "panne_partielle",
-   "2026-09-22": "panne_partielle"
+   "2026-09-22": "panne_partielle",
+   "2026-09-23": "operationnel"
   },
   "portail_confrere": {
    "2026-09-09": "operationnel",
@@ -240,7 +248,8 @@
    "2026-09-19": "operationnel",
    "2026-09-20": "operationnel",
    "2026-09-21": "operationnel",
-   "2026-09-22": "operationnel"
+   "2026-09-22": "operationnel",
+   "2026-09-23": "operationnel"
   }
  }
 }
