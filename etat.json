@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-02T13:45:07+02:00",
- "etat_global": "degrade",
- "resume": "Envoi du compte rendu vers Doctolib : ralenti.",
+ "genere_le": "2026-10-02T14:10:15+02:00",
+ "etat_global": "panne_majeure",
+ "resume": "2 services perturbés : Images et aperçu des examens, Envoi du compte rendu vers Doctolib.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -56,10 +56,10 @@
   {
    "cle": "apercu_images",
    "nom": "Images et aperçu des examens",
-   "etat": "operationnel",
-   "detail": "",
+   "etat": "panne_majeure",
+   "detail": "injoignable",
    "aide": "L'affichage des images dans le compte rendu.",
-   "depuis": "2026-09-09T18:02:36+02:00"
+   "depuis": "2026-10-02T14:10:15+02:00"
   },
   {
    "cle": "signature",
@@ -252,7 +252,7 @@
    "2026-09-29": "operationnel",
    "2026-09-30": "operationnel",
    "2026-10-01": "operationnel",
-   "2026-10-02": "operationnel"
+   "2026-10-02": "panne_majeure"
   },
   "signature": {
    "2026-09-09": "operationnel",
