@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-05T22:35:03+02:00",
- "etat_global": "operationnel",
- "resume": "Tous les services fonctionnent normalement.",
+ "genere_le": "2026-10-06T00:10:21+02:00",
+ "etat_global": "panne_majeure",
+ "resume": "Dictée vocale : en panne.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -40,10 +40,10 @@
   {
    "cle": "dictee",
    "nom": "Dictée vocale",
-   "etat": "operationnel",
-   "detail": "",
+   "etat": "panne_majeure",
+   "detail": "injoignable",
    "aide": "La dictée au micro pendant l'examen.",
-   "depuis": "2026-09-09T18:02:36+02:00"
+   "depuis": "2026-10-06T00:10:21+02:00"
   },
   {
    "cle": "redaction_ia",
@@ -125,7 +125,8 @@
    "2026-10-02": "operationnel",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "panne_majeure"
+   "2026-10-05": "panne_majeure",
+   "2026-10-06": "operationnel"
   },
   "liste_travail": {
    "2026-09-09": "operationnel",
@@ -154,7 +155,8 @@
    "2026-10-02": "operationnel",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "operationnel"
+   "2026-10-05": "operationnel",
+   "2026-10-06": "operationnel"
   },
   "images": {
    "2026-09-09": "operationnel",
@@ -183,7 +185,8 @@
    "2026-10-02": "operationnel",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "operationnel"
+   "2026-10-05": "operationnel",
+   "2026-10-06": "operationnel"
   },
   "dictee": {
    "2026-09-09": "operationnel",
@@ -212,7 +215,8 @@
    "2026-10-02": "operationnel",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "operationnel"
+   "2026-10-05": "operationnel",
+   "2026-10-06": "panne_majeure"
   },
   "redaction_ia": {
    "2026-09-09": "operationnel",
@@ -241,7 +245,8 @@
    "2026-10-02": "operationnel",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "operationnel"
+   "2026-10-05": "operationnel",
+   "2026-10-06": "operationnel"
   },
   "apercu_images": {
    "2026-09-09": "operationnel",
@@ -270,7 +275,8 @@
    "2026-10-02": "panne_majeure",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "operationnel"
+   "2026-10-05": "operationnel",
+   "2026-10-06": "operationnel"
   },
   "signature": {
    "2026-09-09": "operationnel",
@@ -299,7 +305,8 @@
    "2026-10-02": "operationnel",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "operationnel"
+   "2026-10-05": "operationnel",
+   "2026-10-06": "operationnel"
   },
   "envoi_doctolib": {
    "2026-09-09": "degrade",
@@ -328,7 +335,8 @@
    "2026-10-02": "panne_partielle",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "panne_majeure"
+   "2026-10-05": "panne_majeure",
+   "2026-10-06": "operationnel"
   },
   "portail_confrere": {
    "2026-09-09": "operationnel",
@@ -357,7 +365,8 @@
    "2026-10-02": "operationnel",
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
-   "2026-10-05": "operationnel"
+   "2026-10-05": "operationnel",
+   "2026-10-06": "operationnel"
   }
  }
 }
