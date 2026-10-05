@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-06T00:10:21+02:00",
- "etat_global": "panne_majeure",
- "resume": "Dictée vocale : en panne.",
+ "genere_le": "2026-10-06T00:15:25+02:00",
+ "etat_global": "operationnel",
+ "resume": "Tous les services fonctionnent normalement.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -40,10 +40,10 @@
   {
    "cle": "dictee",
    "nom": "Dictée vocale",
-   "etat": "panne_majeure",
-   "detail": "injoignable",
+   "etat": "operationnel",
+   "detail": "",
    "aide": "La dictée au micro pendant l'examen.",
-   "depuis": "2026-10-06T00:10:21+02:00"
+   "depuis": "2026-10-06T00:12:23+02:00"
   },
   {
    "cle": "redaction_ia",
