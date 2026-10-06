@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-06T13:11:45+02:00",
- "etat_global": "degrade",
- "resume": "Dictée vocale : ralenti.",
+ "genere_le": "2026-10-06T13:16:41+02:00",
+ "etat_global": "operationnel",
+ "resume": "Tous les services fonctionnent normalement.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -40,10 +40,10 @@
   {
    "cle": "dictee",
    "nom": "Dictée vocale",
-   "etat": "degrade",
-   "detail": "modèle en cours de chargement",
+   "etat": "operationnel",
+   "detail": "",
    "aide": "La dictée au micro pendant l'examen.",
-   "depuis": "2026-10-06T13:11:45+02:00"
+   "depuis": "2026-10-06T13:13:41+02:00"
   },
   {
    "cle": "redaction_ia",
