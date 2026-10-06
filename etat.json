@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-06T11:01:07+02:00",
- "etat_global": "panne_majeure",
- "resume": "Dictée vocale : en panne.",
+ "genere_le": "2026-10-06T11:11:18+02:00",
+ "etat_global": "degrade",
+ "resume": "Dictée vocale : ralenti.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -19,7 +19,7 @@
    "etat": "operationnel",
    "detail": "",
    "aide": "Ouvrir ris.sonolix.fr et se connecter.",
-   "depuis": "2026-10-05T11:39:12+02:00"
+   "depuis": "2026-10-06T11:10:10+02:00"
   },
   {
    "cle": "liste_travail",
@@ -40,10 +40,10 @@
   {
    "cle": "dictee",
    "nom": "Dictée vocale",
-   "etat": "panne_majeure",
-   "detail": "injoignable",
+   "etat": "degrade",
+   "detail": "modèle en cours de chargement",
    "aide": "La dictée au micro pendant l'examen.",
-   "depuis": "2026-10-06T11:01:07+02:00"
+   "depuis": "2026-10-06T11:11:18+02:00"
   },
   {
    "cle": "redaction_ia",
@@ -126,7 +126,7 @@
    "2026-10-03": "operationnel",
    "2026-10-04": "operationnel",
    "2026-10-05": "panne_majeure",
-   "2026-10-06": "operationnel"
+   "2026-10-06": "degrade"
   },
   "liste_travail": {
    "2026-09-09": "operationnel",
