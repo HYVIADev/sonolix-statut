@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-06T12:36:30+02:00",
- "etat_global": "panne_majeure",
- "resume": "Dictée vocale : en panne.",
+ "genere_le": "2026-10-06T13:01:45+02:00",
+ "etat_global": "degrade",
+ "resume": "Dictée vocale : ralenti.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -40,10 +40,10 @@
   {
    "cle": "dictee",
    "nom": "Dictée vocale",
-   "etat": "panne_majeure",
-   "detail": "injoignable",
+   "etat": "degrade",
+   "detail": "modèle en cours de chargement",
    "aide": "La dictée au micro pendant l'examen.",
-   "depuis": "2026-10-06T12:36:30+02:00"
+   "depuis": "2026-10-06T13:01:45+02:00"
   },
   {
    "cle": "redaction_ia",
@@ -90,8 +90,8 @@
   {
    "cle": "doctolib",
    "nom": "Doctolib",
-   "etat": "operationnel",
-   "detail": "All Systems Operational",
+   "etat": "inconnu",
+   "detail": "état Doctolib non consultable",
    "source": "status.doctolib.com",
    "aide": "Hors de notre contrôle. Nous le recopions pour vous."
   }
