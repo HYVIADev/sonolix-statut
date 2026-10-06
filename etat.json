@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-06T11:11:18+02:00",
- "etat_global": "degrade",
- "resume": "Dictée vocale : ralenti.",
+ "genere_le": "2026-10-06T11:16:12+02:00",
+ "etat_global": "operationnel",
+ "resume": "Tous les services fonctionnent normalement.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -19,7 +19,7 @@
    "etat": "operationnel",
    "detail": "",
    "aide": "Ouvrir ris.sonolix.fr et se connecter.",
-   "depuis": "2026-10-06T11:10:10+02:00"
+   "depuis": "2026-10-06T11:13:10+02:00"
   },
   {
    "cle": "liste_travail",
@@ -40,10 +40,10 @@
   {
    "cle": "dictee",
    "nom": "Dictée vocale",
-   "etat": "degrade",
-   "detail": "modèle en cours de chargement",
+   "etat": "operationnel",
+   "detail": "",
    "aide": "La dictée au micro pendant l'examen.",
-   "depuis": "2026-10-06T11:11:18+02:00"
+   "depuis": "2026-10-06T11:13:10+02:00"
   },
   {
    "cle": "redaction_ia",
