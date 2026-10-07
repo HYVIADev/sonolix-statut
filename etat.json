@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-07T19:25:08+02:00",
- "etat_global": "panne_majeure",
- "resume": "Envoi du compte rendu vers Doctolib : en panne.",
+ "genere_le": "2026-10-07T19:40:21+02:00",
+ "etat_global": "panne_partielle",
+ "resume": "Envoi du compte rendu vers Doctolib : panne partielle.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -72,10 +72,10 @@
   {
    "cle": "envoi_doctolib",
    "nom": "Envoi du compte rendu vers Doctolib",
-   "etat": "panne_majeure",
-   "detail": "6 dépôt(s) en échec, aucun passé",
+   "etat": "panne_partielle",
+   "detail": "6 échec(s) sur 7 envois",
    "aide": "Le dépôt automatique dans le dossier Doctolib du patient.",
-   "depuis": "2026-10-07T19:06:56+02:00"
+   "depuis": "2026-10-07T19:39:21+02:00"
   },
   {
    "cle": "portail_confrere",
