@@ -1,7 +1,7 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-07T15:34:30+02:00",
- "etat_global": "panne_majeure",
+ "genere_le": "2026-10-07T15:39:34+02:00",
+ "etat_global": "panne_partielle",
  "resume": "2 services perturbés : Dictée vocale, Envoi du compte rendu vers Doctolib.",
  "libelles": {
   "operationnel": "Opérationnel",
@@ -40,10 +40,10 @@
   {
    "cle": "dictee",
    "nom": "Dictée vocale",
-   "etat": "panne_majeure",
-   "detail": "injoignable",
+   "etat": "degrade",
+   "detail": "modèle en cours de chargement",
    "aide": "La dictée au micro pendant l'examen.",
-   "depuis": "2026-10-07T15:32:30+02:00"
+   "depuis": "2026-10-07T15:38:39+02:00"
   },
   {
    "cle": "redaction_ia",
