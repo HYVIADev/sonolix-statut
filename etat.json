@@ -1,8 +1,8 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-07T16:04:43+02:00",
+ "genere_le": "2026-10-07T16:14:47+02:00",
  "etat_global": "panne_majeure",
- "resume": "2 services perturbés : Dictée vocale, Envoi du compte rendu vers Doctolib.",
+ "resume": "Envoi du compte rendu vers Doctolib : en panne.",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -40,10 +40,10 @@
   {
    "cle": "dictee",
    "nom": "Dictée vocale",
-   "etat": "degrade",
-   "detail": "modèle en cours de chargement",
+   "etat": "operationnel",
+   "detail": "",
    "aide": "La dictée au micro pendant l'examen.",
-   "depuis": "2026-10-07T16:04:43+02:00"
+   "depuis": "2026-10-07T16:12:47+02:00"
   },
   {
    "cle": "redaction_ia",
@@ -73,7 +73,7 @@
    "cle": "envoi_doctolib",
    "nom": "Envoi du compte rendu vers Doctolib",
    "etat": "panne_majeure",
-   "detail": "2 dépôt(s) en échec, aucun passé",
+   "detail": "1 dépôt(s) en échec, aucun passé",
    "aide": "Le dépôt automatique dans le dossier Doctolib du patient.",
    "depuis": "2026-10-07T15:44:35+02:00"
   },
