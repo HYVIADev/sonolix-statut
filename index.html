@@ -133,7 +133,7 @@
                surveillance:"Sous surveillance", resolu:"Résolu"};
   var PHRASE = {
     operationnel:"Tout fonctionne normalement.",
-    degrade:"Certains services répondent plus lentement que d'habitude.",
+    degrade:"Un service est légèrement perturbé.",
     panne_partielle:"Une partie des services est perturbée.",
     panne_majeure:"Un service essentiel est actuellement interrompu.",
     maintenance:"Maintenance en cours.",
@@ -182,7 +182,7 @@
     return '<div class="ligne">'
       + '<div class="nom">' + ech(c.nom) + '</div>'
       + '<div class="etat e-' + ech(e) + '"><span class="pastille"></span>'
-      + ech(LIB[e] || e) + '</div>'
+      + ech((c.libelles && c.libelles[e]) || LIB[e] || e) + '</div>'
       + (c.aide ? '<div class="aide">' + ech(c.aide) + '</div>' : "")
       + (c.detail ? '<div class="detail e-' + ech(e) + '">' + ech(c.detail) + '</div>' : "")
       + barres + '</div>';
