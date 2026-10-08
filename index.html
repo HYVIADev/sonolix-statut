@@ -58,13 +58,30 @@
   .e-inconnu{color:var(--gris)} .e-inconnu .pastille{background:var(--gris)}
   .e-non_applicable{color:var(--gris)} .e-non_applicable .pastille{background:var(--gris)}
 
-  .barres{grid-column:1/-1;display:flex;gap:2px;margin-top:10px;height:26px;align-items:stretch}
-  .barres i{flex:1 1 0;border-radius:2px;background:var(--trait);min-width:2px}
-  .barres i.operationnel{background:var(--vert)} .barres i.degrade{background:var(--jaune)}
-  .barres i.panne_partielle{background:var(--orange)} .barres i.panne_majeure{background:var(--rouge)}
-  .barres i.maintenance{background:var(--bleu)}
-  .echelle{grid-column:1/-1;display:flex;justify-content:space-between;
-           font-size:11.5px;color:var(--encre-doux);margin-top:5px}
+  .frise{grid-column:1/-1;margin-top:10px}
+  .frise + .frise{margin-top:14px}
+  .frise-tete{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2px 12px;
+              font-size:12px;color:var(--encre-doux);margin-bottom:5px}
+  .frise-tete b{font-weight:600;color:var(--encre)}
+  .barres{display:flex;gap:2px;height:22px;align-items:stretch}
+  .barres.h24{gap:3px}
+  .barres i{flex:1 1 0;border-radius:2px;background:var(--trait);min-width:2px;cursor:pointer}
+  .barres i:hover,.barres i.actif{outline:2px solid var(--encre);outline-offset:1px}
+  .barres i.operationnel,.cles i.operationnel{background:var(--vert)}
+  .barres i.degrade,.cles i.degrade{background:var(--jaune)}
+  .barres i.panne_partielle,.cles i.panne_partielle{background:var(--orange)}
+  .barres i.panne_majeure,.cles i.panne_majeure{background:var(--rouge)}
+  .barres i.maintenance,.cles i.maintenance{background:var(--bleu)}
+  .echelle{display:flex;justify-content:space-between;
+           font-size:11.5px;color:var(--encre-doux);margin-top:4px}
+  .legende{padding:0 20px 14px;font-size:13px;color:var(--encre-doux);line-height:1.55}
+  .legende b{color:var(--encre);font-weight:600}
+  .cles{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12.5px}
+  .cles span{display:inline-flex;align-items:center;gap:6px}
+  .cles i{width:10px;height:10px;border-radius:2px;background:var(--trait);display:inline-block}
+  #bulle{position:absolute;z-index:10;display:none;max-width:290px;padding:7px 10px;border-radius:8px;
+         background:var(--encre);color:var(--carte);font-size:13px;line-height:1.4;
+         box-shadow:var(--ombre);pointer-events:none}
 
   .incident{padding:16px 20px;border-top:1px solid var(--trait)}
   .incident:first-of-type{border-top:none}
@@ -153,40 +170,160 @@
     return d.toLocaleString("fr-FR", {day:"2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit"});
   }
 
-  function jours(histo, n) {
-    // 90 cases, la plus ancienne à gauche. Un jour sans mesure reste neutre :
-    // on n'invente pas un vert qu'on n'a pas mesuré.
-    var out = [], j = new Date();
-    for (var i = n - 1; i >= 0; i--) {
-      var d = new Date(j.getTime() - i * 86400000);
-      var cle = d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-"
-              + String(d.getDate()).padStart(2,"0");
-      out.push({jour: cle, etat: (histo && histo[cle]) || ""});
-    }
-    return out;
+  // ── Frises ─────────────────────────────────────────────────────────────────
+  // 08/10/2026 — deux frises par service : les 24 dernières heures (un point par
+  // heure, au pire moment de l'heure) et un point par jour, coloré à la DURÉE de
+  // la perturbation. Avant, une alerte d'une minute peignait la journée entière.
+  var MOT = {operationnel:"aucune perturbation", degrade:"légère perturbation",
+             panne_partielle:"panne partielle", panne_majeure:"panne",
+             maintenance:"maintenance", inconnu:"état indéterminé"};
+  var SEUIL = 15;
+
+  function cleJour(d) {
+    return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-"
+         + String(d.getDate()).padStart(2,"0");
+  }
+  function enDate(k) { return new Date(+k.slice(0,4), +k.slice(5,7) - 1, +k.slice(8,10), 12); }
+  function dateCourte(k) { return enDate(k).toLocaleDateString("fr-FR", {day:"numeric", month:"short"}); }
+  function dateLongue(k) {
+    var t = enDate(k).toLocaleDateString("fr-FR", {weekday:"short", day:"numeric", month:"short"});
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+  function quand(k) {
+    var auj = new Date(); auj.setHours(12, 0, 0, 0);
+    if (k === cleJour(auj)) return "aujourd'hui";
+    if (k === cleJour(new Date(auj.getTime() - 864e5))) return "hier";
+    return dateLongue(k);
+  }
+  function duree(m) {
+    if (m < 60) return m + " min";
+    var h = Math.floor(m / 60), r = m % 60;
+    return h + " h" + (r ? " " + String(r).padStart(2, "0") : "");
+  }
+  function libHeure(k) {
+    var h = parseInt(k.slice(11, 13), 10);
+    return quand(k.slice(0, 10)) + ", " + h + " h – " + ((h + 1) % 24) + " h";
   }
 
-  function ligne(c, histo) {
-    var e = c.etat || "inconnu";
-    var barres = "";
-    var serie = jours(histo, window.innerWidth < 560 ? 45 : 90);
-    // Tant qu'on n'a pas au moins trois jours mesurés, on n'affiche pas la frise :
-    // 90 barres grises donneraient l'impression que rien n'a jamais fonctionné.
-    if (histo && Object.keys(histo).length >= 3) {
-      barres = '<div class="barres">' + serie.map(function (d) {
-        var t = d.etat ? (LIB[d.etat] || d.etat) : "pas de mesure";
-        return '<i class="' + ech(d.etat) + '" title="' + ech(d.jour + " — " + t) + '"></i>';
-      }).join("") + '</div><div class="echelle"><span>il y a ' + serie.length
-              + ' jours</span><span>aujourd\'hui</span></div>';
+  function texteHeure(x) {
+    if (!x.mes) return libHeure(x.h) + " — pas de mesure";
+    if (x.etat === "maintenance") return libHeure(x.h) + " — maintenance";
+    return libHeure(x.h) + " — "
+      + (x.pert ? MOT[x.etat] + " pendant " + duree(x.pert) : "aucune perturbation");
+  }
+  function texteJour(n) {
+    if (!n.pert) return n.etat === "maintenance" ? "maintenance" : "aucune perturbation";
+    if (n.etat === "operationnel")
+      return "brève perturbation (" + duree(n.pert) + " au total, moins de " + SEUIL + " min)";
+    return MOT[n.etat] + " · " + duree(n.pert) + " de perturbation au total";
+  }
+
+  function frise24(fr) {
+    var h = (fr && fr.heures) || [];
+    if (!h.some(function (x) { return x.mes > 0; })) return "";
+    return '<div class="frise"><div class="frise-tete"><span><b>24 dernières heures</b>'
+      + ' · 1 point = 1 heure</span></div><div class="barres h24">'
+      + h.map(function (x) {
+          return '<i class="' + ech(x.mes ? x.etat : "vide") + '" data-t="' + ech(texteHeure(x)) + '"></i>';
+        }).join("")
+      + '</div><div class="echelle"><span>' + ech(quand(h[0].h.slice(0, 10)) + ", "
+      + parseInt(h[0].h.slice(11, 13), 10) + " h") + '</span><span>maintenant</span></div></div>';
+  }
+
+  function friseJours(histo, fr) {
+    var nouv = (fr && fr.jours) || {};
+    var vus = {};
+    Object.keys(histo || {}).concat(Object.keys(nouv)).forEach(function (k) { vus[k] = 1; });
+    var cles = Object.keys(vus).sort();
+    // Tant qu'on n'a pas au moins trois jours mesurés, on n'affiche pas la frise.
+    if (cles.length < 3) return "";
+    // Du premier jour mesuré à aujourd'hui : pas de cases grises avant la mise en service.
+    var max = window.innerWidth < 560 ? 45 : 90, serie = [];
+    var midi = new Date(); midi.setHours(12, 0, 0, 0);
+    for (var i = 0; i < max; i++) {
+      var k = cleJour(new Date(midi.getTime() - i * 864e5));
+      if (k < cles[0]) break;
+      serie.unshift(k);
     }
+    var cases = serie.map(function (k) {
+      var n = nouv[k], etat, t;
+      if (n && n.mes) { etat = n.etat; t = texteJour(n); }
+      else if (histo && histo[k]) {
+        // Jours d'avant le suivi à la minute : on ne connaît que le pire moment.
+        etat = histo[k];
+        t = etat === "operationnel" ? "aucune perturbation" : MOT[etat] + " à un moment de la journée";
+      } else { etat = "vide"; t = "pas de mesure"; }
+      return '<i class="' + ech(etat) + '" data-t="' + ech(dateLongue(k) + " — " + t) + '"></i>';
+    }).join("");
+    var d = fr && fr.dispo, dispo = "";
+    if (d) {
+      var depuis = (Date.now() - enDate(d.depuis).getTime()) > 29 * 864e5
+        ? "sur 30 jours" : "depuis le " + dateCourte(d.depuis);
+      dispo = '<span>' + ech(d.pct.toLocaleString("fr-FR", {maximumFractionDigits: 2})
+        + " % du temps sans perturbation " + depuis) + '</span>';
+    }
+    var titre = serie.length >= max ? max + " derniers jours" : "Depuis le " + dateCourte(serie[0]);
+    return '<div class="frise"><div class="frise-tete"><span><b>' + ech(titre) + '</b>'
+      + ' · 1 point = 1 jour</span>' + dispo + '</div><div class="barres">' + cases + '</div>'
+      + '<div class="echelle"><span>' + ech(dateCourte(serie[0])) + '</span><span>aujourd\'hui</span></div></div>';
+  }
+
+  function legende() {
+    var cle = function (c, t) { return '<span><i class="' + c + '"></i>' + t + '</span>'; };
+    return '<div class="legende">Pour chaque service : les <b>24 dernières heures</b>, un point par heure, '
+      + 'puis <b>un point par jour</b>. Une journée ne change de couleur que si la perturbation a duré '
+      + 'au moins ' + SEUIL + ' minutes au total. Survolez ou touchez un point pour le détail.'
+      + '<div class="cles">' + cle("operationnel", "Aucune perturbation") + cle("degrade", "Légère perturbation")
+      + cle("panne_partielle", "Panne partielle") + cle("panne_majeure", "Panne")
+      + cle("maintenance", "Maintenance") + cle("vide", "Pas de mesure") + '</div></div>';
+  }
+
+  function ligne(c, histo, fr) {
+    var e = c.etat || "inconnu";
     return '<div class="ligne">'
       + '<div class="nom">' + ech(c.nom) + '</div>'
       + '<div class="etat e-' + ech(e) + '"><span class="pastille"></span>'
       + ech((c.libelles && c.libelles[e]) || LIB[e] || e) + '</div>'
       + (c.aide ? '<div class="aide">' + ech(c.aide) + '</div>' : "")
       + (c.detail ? '<div class="detail e-' + ech(e) + '">' + ech(c.detail) + '</div>' : "")
-      + barres + '</div>';
+      + frise24(fr) + friseJours(histo, fr) + '</div>';
   }
+
+  // Une seule bulle pour toute la page : au survol sur ordinateur, au toucher (ou en
+  // glissant le doigt le long d'une frise) sur téléphone. Le `title` du navigateur
+  // n'existe pas sur mobile.
+  var bulle = document.createElement("div"), actif = null;
+  bulle.id = "bulle"; bulle.setAttribute("role", "status");
+  document.body.appendChild(bulle);
+  function cacher() {
+    bulle.style.display = "none";
+    if (actif) actif.classList.remove("actif");
+    actif = null;
+  }
+  function montrer(el) {
+    if (actif) actif.classList.remove("actif");
+    actif = el; el.classList.add("actif");
+    bulle.textContent = el.getAttribute("data-t");
+    bulle.style.display = "block";
+    var r = el.getBoundingClientRect(), l = bulle.offsetWidth;
+    var x = Math.min(Math.max(8, r.left + r.width / 2 - l / 2), document.documentElement.clientWidth - l - 8);
+    bulle.style.left = (x + window.scrollX) + "px";
+    bulle.style.top = (r.top + window.scrollY - bulle.offsetHeight - 8) + "px";
+  }
+  function point(el) { return el && el.closest ? el.closest(".barres i[data-t]") : null; }
+  document.addEventListener("mouseover", function (e) {
+    var el = point(e.target);
+    if (el) montrer(el); else if (actif) cacher();
+  });
+  document.addEventListener("click", function (e) {
+    var el = point(e.target);
+    if (el) montrer(el); else cacher();
+  });
+  document.addEventListener("touchmove", function (e) {
+    var t = e.touches[0], el = point(document.elementFromPoint(t.clientX, t.clientY));
+    if (el) montrer(el);
+  }, {passive: true});
+  window.addEventListener("resize", cacher);
 
   function bloc(titre, lignes) {
     if (!lignes) return "";
@@ -225,13 +362,18 @@
 
     $("incidents").innerHTML = incidents(d.incidents);
 
-    var histo = d.historique || {};
+    var histo = d.historique || {}, fr = d.frises || {};
+    if (d.seuil_jour_min) SEUIL = d.seuil_jour_min;
+    var lignes = (d.composants || []).map(function (c) {
+      return ligne(c, histo[c.cle], fr[c.cle]);
+    }).join("");
     var corps = bloc("Services Sonolix",
-      (d.composants || []).map(function (c) { return ligne(c, histo[c.cle]); }).join(""));
+      (lignes.indexOf('class="frise"') >= 0 ? legende() : "") + lignes);
     if (d.tiers && d.tiers.length) {
       corps += bloc("Services extérieurs — nous les recopions, nous ne les pilotons pas",
         d.tiers.map(function (c) { return ligne(c, null); }).join(""));
     }
+    cacher();
     $("corps").innerHTML = corps;
 
     var mc = d.mon_cabinet;
