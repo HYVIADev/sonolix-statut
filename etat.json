@@ -1,6 +1,6 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-08T13:57:08+02:00",
+ "genere_le": "2026-10-08T14:06:14+02:00",
  "etat_global": "degrade",
  "resume": "Envoi du compte rendu vers Doctolib : quelques dépôts en échec.",
  "pastille": "Envoi Doctolib perturbé",
@@ -88,7 +88,7 @@
    "cle": "envoi_doctolib",
    "nom": "Envoi du compte rendu vers Doctolib",
    "etat": "degrade",
-   "detail": "1 échec(s) sur 6 envois",
+   "detail": "1 échec(s) sur 7 envois",
    "aide": "Le dépôt automatique dans le dossier Doctolib du patient.",
    "libelles": {
     "degrade": "Quelques dépôts en échec"
@@ -416,12 +416,6 @@
   "acces_ris": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -557,31 +551,31 @@
      "h": "2026-10-08T13",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 57
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 139
+     "mes": 148
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   },
   "liste_travail": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -717,31 +711,31 @@
      "h": "2026-10-08T13",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 57
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 139
+     "mes": 148
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   },
   "images": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -877,31 +871,31 @@
      "h": "2026-10-08T13",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 57
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 139
+     "mes": 148
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   },
   "dictee": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -1037,31 +1031,31 @@
      "h": "2026-10-08T13",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 57
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 139
+     "mes": 148
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   },
   "redaction_ia": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -1197,31 +1191,31 @@
      "h": "2026-10-08T13",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 57
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 139
+     "mes": 148
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   },
   "apercu_images": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -1357,31 +1351,31 @@
      "h": "2026-10-08T13",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 57
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 139
+     "mes": 148
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   },
   "signature": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -1517,31 +1511,31 @@
      "h": "2026-10-08T13",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 57
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 139
+     "mes": 148
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   },
   "envoi_doctolib": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -1676,32 +1670,32 @@
     {
      "h": "2026-10-08T13",
      "etat": "degrade",
-     "pert": 51,
-     "mes": 57
+     "pert": 53,
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "degrade",
+     "pert": 7,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "degrade",
-     "pert": 51,
-     "mes": 139
+     "pert": 60,
+     "mes": 148
     }
    },
    "dispo": {
-    "pct": 63.31,
+    "pct": 59.46,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   },
   "portail_confrere": {
    "heures": [
     {
-     "h": "2026-10-07T14",
-     "etat": "",
-     "pert": 0,
-     "mes": 0
-    },
-    {
      "h": "2026-10-07T15",
      "etat": "",
      "pert": 0,
@@ -1837,20 +1831,26 @@
      "h": "2026-10-08T13",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 57
+     "mes": 59
+    },
+    {
+     "h": "2026-10-08T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 7
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 139
+     "mes": 148
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 139
+    "mes": 148
    }
   }
  },
