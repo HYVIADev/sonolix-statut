@@ -1,6 +1,6 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-08T21:32:36+02:00",
+ "genere_le": "2026-10-08T21:37:31+02:00",
  "etat_global": "operationnel",
  "resume": "Tous les services fonctionnent normalement.",
  "pastille": "",
@@ -115,8 +115,8 @@
   {
    "cle": "doctolib",
    "nom": "Doctolib",
-   "etat": "inconnu",
-   "detail": "état Doctolib non consultable",
+   "etat": "operationnel",
+   "detail": "All Systems Operational",
    "source": "status.doctolib.com",
    "aide": "Hors de notre contrôle. Nous le recopions pour vous."
   }
@@ -557,20 +557,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   },
   "liste_travail": {
@@ -717,20 +717,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   },
   "images": {
@@ -877,20 +877,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   },
   "dictee": {
@@ -1037,20 +1037,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   },
   "redaction_ia": {
@@ -1197,20 +1197,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   },
   "apercu_images": {
@@ -1357,20 +1357,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   },
   "signature": {
@@ -1517,20 +1517,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   },
   "envoi_doctolib": {
@@ -1677,20 +1677,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "degrade",
      "pert": 217,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
-    "pct": 63.16,
+    "pct": 63.47,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   },
   "portail_confrere": {
@@ -1837,20 +1837,20 @@
      "h": "2026-10-08T21",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 33
+     "mes": 38
     }
    ],
    "jours": {
     "2026-10-08": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 589
+     "mes": 594
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 589
+    "mes": 594
    }
   }
  },
