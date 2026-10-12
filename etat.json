@@ -1,6 +1,6 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-12T15:31:04+02:00",
+ "genere_le": "2026-10-12T15:36:15+02:00",
  "etat_global": "operationnel",
  "resume": "Tous les services fonctionnent normalement.",
  "pastille": "",
@@ -115,8 +115,8 @@
   {
    "cle": "doctolib",
    "nom": "Doctolib",
-   "etat": "operationnel",
-   "detail": "All Systems Operational",
+   "etat": "inconnu",
+   "detail": "état Doctolib non consultable",
    "source": "status.doctolib.com",
    "aide": "Hors de notre contrôle. Nous le recopions pour vous."
   }
@@ -593,7 +593,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -620,13 +620,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 99.95,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   },
   "liste_travail": {
@@ -773,7 +773,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -800,13 +800,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   },
   "images": {
@@ -953,7 +953,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -980,13 +980,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   },
   "dictee": {
@@ -1133,7 +1133,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -1160,13 +1160,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   },
   "redaction_ia": {
@@ -1313,7 +1313,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -1340,13 +1340,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   },
   "apercu_images": {
@@ -1493,7 +1493,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -1520,13 +1520,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   },
   "signature": {
@@ -1673,7 +1673,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -1700,13 +1700,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   },
   "envoi_doctolib": {
@@ -1853,7 +1853,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -1880,13 +1880,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 96.34,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   },
   "portail_confrere": {
@@ -2033,7 +2033,7 @@
      "h": "2026-10-12T15",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 31
+     "mes": 36
     }
    ],
    "jours": {
@@ -2060,13 +2060,13 @@
     "2026-10-12": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 923
+     "mes": 928
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 5927
+    "mes": 5932
    }
   }
  },
