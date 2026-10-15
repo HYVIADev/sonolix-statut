@@ -1,9 +1,9 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-10-15T08:24:01+02:00",
- "etat_global": "panne_majeure",
- "resume": "Envoi du compte rendu vers Doctolib : en panne.",
- "pastille": "Envoi Doctolib interrompu",
+ "genere_le": "2026-10-15T08:39:10+02:00",
+ "etat_global": "panne_partielle",
+ "resume": "Envoi du compte rendu vers Doctolib : panne partielle.",
+ "pastille": "Envoi Doctolib perturbé",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -87,8 +87,8 @@
   {
    "cle": "envoi_doctolib",
    "nom": "Envoi du compte rendu vers Doctolib",
-   "etat": "panne_majeure",
-   "detail": "1 dépôt(s) en échec, aucun passé",
+   "etat": "panne_partielle",
+   "detail": "1 échec(s) sur 2 envois",
    "aide": "Le dépôt automatique dans le dossier Doctolib du patient.",
    "libelles": {
     "degrade": "Quelques dépôts en échec"
@@ -98,7 +98,7 @@
     "panne_partielle": "Envoi Doctolib perturbé",
     "panne_majeure": "Envoi Doctolib interrompu"
    },
-   "depuis": "2026-10-15T08:24:01+02:00"
+   "depuis": "2026-10-15T08:38:10+02:00"
   },
   {
    "cle": "portail_confrere",
@@ -620,7 +620,7 @@
      "h": "2026-10-15T08",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 24
+     "mes": 39
     }
    ],
    "jours": {
@@ -662,13 +662,13 @@
     "2026-10-15": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 498
+     "mes": 513
     }
    },
    "dispo": {
     "pct": 99.94,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   },
   "liste_travail": {
@@ -815,7 +815,7 @@
      "h": "2026-10-15T08",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 24
+     "mes": 39
     }
    ],
    "jours": {
@@ -857,13 +857,13 @@
     "2026-10-15": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 498
+     "mes": 513
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   },
   "images": {
@@ -1010,7 +1010,7 @@
      "h": "2026-10-15T08",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 24
+     "mes": 39
     }
    ],
    "jours": {
@@ -1052,13 +1052,13 @@
     "2026-10-15": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 498
+     "mes": 513
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   },
   "dictee": {
@@ -1205,7 +1205,7 @@
      "h": "2026-10-15T08",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 24
+     "mes": 39
     }
    ],
    "jours": {
@@ -1247,13 +1247,13 @@
     "2026-10-15": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 498
+     "mes": 513
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   },
   "redaction_ia": {
@@ -1400,7 +1400,7 @@
      "h": "2026-10-15T08",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 24
+     "mes": 39
     }
    ],
    "jours": {
@@ -1442,13 +1442,13 @@
     "2026-10-15": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 498
+     "mes": 513
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   },
   "apercu_images": {
@@ -1595,7 +1595,7 @@
      "h": "2026-10-15T08",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 24
+     "mes": 39
     }
    ],
    "jours": {
@@ -1637,13 +1637,13 @@
     "2026-10-15": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 498
+     "mes": 513
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   },
   "signature": {
@@ -1790,7 +1790,7 @@
      "h": "2026-10-15T08",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 24
+     "mes": 39
     }
    ],
    "jours": {
@@ -1832,13 +1832,13 @@
     "2026-10-15": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 498
+     "mes": 513
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   },
   "envoi_doctolib": {
@@ -1984,8 +1984,8 @@
     {
      "h": "2026-10-15T08",
      "etat": "panne_majeure",
-     "pert": 1,
-     "mes": 24
+     "pert": 16,
+     "mes": 39
     }
    ],
    "jours": {
@@ -2025,15 +2025,15 @@
      "mes": 1424
     },
     "2026-10-15": {
-     "etat": "operationnel",
-     "pert": 1,
-     "mes": 498
+     "etat": "panne_partielle",
+     "pert": 16,
+     "mes": 513
     }
    },
    "dispo": {
-    "pct": 95.07,
+    "pct": 94.93,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   },
   "portail_confrere": {
@@ -2180,7 +2180,7 @@
      "h": "2026-10-15T08",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 24
+     "mes": 39
     }
    ],
    "jours": {
@@ -2222,13 +2222,13 @@
     "2026-10-15": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 498
+     "mes": 513
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-08",
-    "mes": 9779
+    "mes": 9794
    }
   }
  },
