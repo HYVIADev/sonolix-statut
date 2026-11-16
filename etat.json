@@ -1,9 +1,9 @@
 {
  "produit": "Sonolix",
- "genere_le": "2026-11-16T10:47:54+01:00",
- "etat_global": "operationnel",
- "resume": "Tous les services fonctionnent normalement.",
- "pastille": "",
+ "genere_le": "2026-11-16T14:28:03+01:00",
+ "etat_global": "degrade",
+ "resume": "Envoi du compte rendu vers Doctolib : quelques dépôts en échec.",
+ "pastille": "Envoi Doctolib perturbé",
  "libelles": {
   "operationnel": "Opérationnel",
   "maintenance": "Maintenance",
@@ -22,7 +22,7 @@
    "aide": "Ouvrir ris.sonolix.fr et se connecter.",
    "libelles": {},
    "pastille": {},
-   "depuis": "2026-11-10T15:42:11+01:00"
+   "depuis": "2026-11-16T10:49:48+01:00"
   },
   {
    "cle": "liste_travail",
@@ -87,8 +87,8 @@
   {
    "cle": "envoi_doctolib",
    "nom": "Envoi du compte rendu vers Doctolib",
-   "etat": "operationnel",
-   "detail": "",
+   "etat": "degrade",
+   "detail": "1 échec(s) sur 5 envois",
    "aide": "Le dépôt automatique dans le dossier Doctolib du patient.",
    "libelles": {
     "degrade": "Quelques dépôts en échec"
@@ -98,7 +98,7 @@
     "panne_partielle": "Envoi Doctolib perturbé",
     "panne_majeure": "Envoi Doctolib interrompu"
    },
-   "depuis": "2026-11-13T16:58:57+01:00"
+   "depuis": "2026-11-16T14:27:02+01:00"
   },
   {
    "cle": "portail_confrere",
@@ -192,7 +192,7 @@
    "2026-11-13": "operationnel",
    "2026-11-14": "operationnel",
    "2026-11-15": "operationnel",
-   "2026-11-16": "operationnel"
+   "2026-11-16": "panne_majeure"
   },
   "liste_travail": {
    "2026-09-09": "operationnel",
@@ -689,7 +689,7 @@
    "2026-11-13": "panne_partielle",
    "2026-11-14": "operationnel",
    "2026-11-15": "operationnel",
-   "2026-11-16": "operationnel"
+   "2026-11-16": "degrade"
   },
   "portail_confrere": {
    "2026-09-09": "operationnel",
@@ -766,30 +766,6 @@
  "frises": {
   "acces_ris": {
    "heures": [
-    {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
     {
      "h": "2026-11-15T15",
      "etat": "operationnel",
@@ -906,9 +882,33 @@
     },
     {
      "h": "2026-11-16T10",
+     "etat": "panne_majeure",
+     "pert": 1,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 29
     }
    ],
    "jours": {
@@ -1109,43 +1109,19 @@
     },
     "2026-11-16": {
      "etat": "operationnel",
-     "pert": 0,
-     "mes": 647
+     "pert": 1,
+     "mes": 867
     }
    },
    "dispo": {
     "pct": 99.96,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   },
   "liste_travail": {
    "heures": [
     {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
-    {
      "h": "2026-11-15T15",
      "etat": "operationnel",
      "pert": 0,
@@ -1263,7 +1239,31 @@
      "h": "2026-11-16T10",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 29
     }
    ],
    "jours": {
@@ -1465,42 +1465,18 @@
     "2026-11-16": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 647
+     "mes": 867
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   },
   "images": {
    "heures": [
     {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
-    {
      "h": "2026-11-15T15",
      "etat": "operationnel",
      "pert": 0,
@@ -1618,7 +1594,31 @@
      "h": "2026-11-16T10",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 29
     }
    ],
    "jours": {
@@ -1820,42 +1820,18 @@
     "2026-11-16": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 647
+     "mes": 867
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   },
   "dictee": {
    "heures": [
     {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
-    {
      "h": "2026-11-15T15",
      "etat": "operationnel",
      "pert": 0,
@@ -1973,7 +1949,31 @@
      "h": "2026-11-16T10",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 29
     }
    ],
    "jours": {
@@ -2175,42 +2175,18 @@
     "2026-11-16": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 647
+     "mes": 867
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   },
   "redaction_ia": {
    "heures": [
     {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
-    {
      "h": "2026-11-15T15",
      "etat": "operationnel",
      "pert": 0,
@@ -2328,7 +2304,31 @@
      "h": "2026-11-16T10",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 29
     }
    ],
    "jours": {
@@ -2530,42 +2530,18 @@
     "2026-11-16": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 647
+     "mes": 867
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   },
   "apercu_images": {
    "heures": [
     {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
-    {
      "h": "2026-11-15T15",
      "etat": "operationnel",
      "pert": 0,
@@ -2683,7 +2659,31 @@
      "h": "2026-11-16T10",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 29
     }
    ],
    "jours": {
@@ -2885,42 +2885,18 @@
     "2026-11-16": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 647
+     "mes": 867
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   },
   "signature": {
    "heures": [
     {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
-    {
      "h": "2026-11-15T15",
      "etat": "operationnel",
      "pert": 0,
@@ -3038,7 +3014,31 @@
      "h": "2026-11-16T10",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 29
     }
    ],
    "jours": {
@@ -3240,41 +3240,17 @@
     "2026-11-16": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 647
+     "mes": 867
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   },
   "envoi_doctolib": {
    "heures": [
-    {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
     {
      "h": "2026-11-15T15",
      "etat": "operationnel",
@@ -3393,7 +3369,31 @@
      "h": "2026-11-16T10",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "degrade",
+     "pert": 2,
+     "mes": 29
     }
    ],
    "jours": {
@@ -3594,42 +3594,18 @@
     },
     "2026-11-16": {
      "etat": "operationnel",
-     "pert": 0,
-     "mes": 647
+     "pert": 2,
+     "mes": 867
     }
    },
    "dispo": {
-    "pct": 96.19,
+    "pct": 96.18,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   },
   "portail_confrere": {
    "heures": [
-    {
-     "h": "2026-11-15T11",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T12",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T13",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 60
-    },
-    {
-     "h": "2026-11-15T14",
-     "etat": "operationnel",
-     "pert": 0,
-     "mes": 59
-    },
     {
      "h": "2026-11-15T15",
      "etat": "operationnel",
@@ -3748,7 +3724,31 @@
      "h": "2026-11-16T10",
      "etat": "operationnel",
      "pert": 0,
-     "mes": 48
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T11",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T12",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 60
+    },
+    {
+     "h": "2026-11-16T13",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 59
+    },
+    {
+     "h": "2026-11-16T14",
+     "etat": "operationnel",
+     "pert": 0,
+     "mes": 29
     }
    ],
    "jours": {
@@ -3950,13 +3950,13 @@
     "2026-11-16": {
      "etat": "operationnel",
      "pert": 0,
-     "mes": 647
+     "mes": 867
     }
    },
    "dispo": {
     "pct": 100.0,
     "depuis": "2026-10-17",
-    "mes": 42967
+    "mes": 42949
    }
   }
  },
